@@ -54,22 +54,27 @@ class _MyHomePageState extends State<MyHomePage> {
             leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
             title:Text("AmazonPrime"),
           ),
+          Divider(thickness: 7), //線
           ListTile(
             leading: Icon(Icons.video_collection),
             title:Text("Netflix"),
           ) ,
+          Divider(),
           ListTile(
             leading: Icon(Icons.video_collection),
             title:Text("Hulu"),
           ) ,
-           ListTile(
+          Divider(),
+          ListTile(
             leading: Icon(Icons.video_collection),
             title:Text("U-NEXT"),
           ) ,
-           ListTile(
+          Divider(),
+          ListTile(
             leading: Icon(Icons.vpn_key),
             title:Text("FOD"),
           ) ,
+          Divider(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
