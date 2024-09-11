@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NextPage extends StatefulWidget {
+  final String title;
+  NextPage(this.title);
   @override
   _NextPageState createState() => _NextPageState();
 }
@@ -10,7 +12,7 @@ class _NextPageState extends State<NextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Next Page'),
+        title: Text(widget.title),
       ),
       body: Center(
         child: Padding(

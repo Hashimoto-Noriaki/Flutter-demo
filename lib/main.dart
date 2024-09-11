@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 onTap:(){
                   //画面遷移の処理を記述
-                  Navigator.push(context,MaterialPageRoute(builder:(context)=> NextPage()));
+                  Navigator.push(context,MaterialPageRoute(builder:(context)=> NextPage(titleList[i])));
                 },
                 leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
                 title:Text(titleList[i]),
