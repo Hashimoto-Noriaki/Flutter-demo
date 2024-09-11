@@ -50,34 +50,19 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("Flutterのデモ"),
       ),
-      body: ListView( //ListViewは複数のヴィジェットをスクロール可能な状態で、縦に並べるWidget
-        children: [
-          ListTile(  //ListTileは1枚のリストができる
-            leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
-            title:Text(titleList[0]),
-          ),
-          Divider(thickness: 7), //線
-          ListTile(
-            leading: Icon(Icons.video_collection),
-            title:Text(titleList[1]),
-          ) ,
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.video_collection),
-            title:Text(titleList[2]),
-          ) ,
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.video_collection),
-            title:Text(titleList[3]),
-          ) ,
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.vpn_key),
-            title:Text(titleList[4]),
-          ) ,
-          Divider(),
-        ],
+      body: ListView.builder(
+        // itemCount: titleList.length,
+        itemBuilder: (BuildContext context,int i){
+          return Column(
+            children:[
+              ListTile(
+                leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
+                title:Text(titleList[i]),
+              ),
+              Divider(),
+            ]
+          );
+        },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
@@ -87,3 +72,33 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+// ListView( //ListViewは複数のヴィジェットをスクロール可能な状態で、縦に並べるWidget
+//         children: [
+//           ListTile(  //ListTileは1枚のリストができる
+//             leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
+//             title:Text(titleList[0]),
+//           ),
+//           Divider(thickness: 7), //線
+//           ListTile(
+//             leading: Icon(Icons.video_collection),
+//             title:Text(titleList[1]),
+//           ) ,
+//           Divider(),
+//           ListTile(
+//             leading: Icon(Icons.video_collection),
+//             title:Text(titleList[2]),
+//           ) ,
+//           Divider(),
+//           ListTile(
+//             leading: Icon(Icons.video_collection),
+//             title:Text(titleList[3]),
+//           ) ,
+//           Divider(),
+//           ListTile(
+//             leading: Icon(Icons.vpn_key),
+//             title:Text(titleList[4]),
+//           ) ,
+//           Divider(),
+//         ],
+//       ),
