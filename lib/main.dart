@@ -68,7 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: (){
           //ボタンが押された時の処理
           titleList.add('Google');
-          // print(titleList);
+          titleList.add('Youtube');
+          print(titleList);
           setState((){
           });
         },
