@@ -10,5 +10,8 @@ flutter run -d macOS 　　//デスクトップで動作確認
 UIのこと
 WidgetとプロパティでUIを構築していく
 
+### 新しくファイルを作成した時に、statefulWidgetの雛形を作成
+stful
+
 
 
