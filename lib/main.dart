@@ -48,19 +48,21 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("Flutterのデモ"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+      body: ListView( //ListViewは複数のヴィジェットをスクロール可能な状態で、縦に並べるWidget
+        children: [
+          ListTile(  //ListTileは1枚のリストができる
+            leading: Icon(Icons.vpn_key),  //leadingは左側に何かを表示したい時
+            title:Text("Amazon"),
+          ),
+          ListTile(
+            leading: Icon(Icons.vpn_key),
+            title:Text("楽天"),
+          ) ,
+          ListTile(
+            leading: Icon(Icons.vpn_key),
+            title:Text("Yahoo"),
+          ) ,
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
