@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .  # 修正した場合
+    container_name: app
+    command: "flutter run -d chrome --release --web-port 40095 --web-hostname 0.0.0.0"
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:40095
+    tty: true
+    stdin_open: true
