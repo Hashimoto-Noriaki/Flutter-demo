@@ -21,4 +21,7 @@ docker compose up -d
 
 docker compose down
 ```
-
+### linter(静的解析)
+```
+flutter analyze
+```
