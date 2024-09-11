@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Flutterのデモ"),
       ),
       body: ListView.builder(
-        // itemCount: titleList.length,
+        itemCount: titleList.length,
         itemBuilder: (BuildContext context,int i){
           return Column(
             children:[
@@ -65,40 +65,16 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: (){
+          //ボタンが押された時の処理
+          titleList.add('Google');
+          // print(titleList);
+          setState((){
+          });
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), 
     );
   }
 }
-
-// ListView( //ListViewは複数のヴィジェットをスクロール可能な状態で、縦に並べるWidget
-//         children: [
-//           ListTile(  //ListTileは1枚のリストができる
-//             leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
-//             title:Text(titleList[0]),
-//           ),
-//           Divider(thickness: 7), //線
-//           ListTile(
-//             leading: Icon(Icons.video_collection),
-//             title:Text(titleList[1]),
-//           ) ,
-//           Divider(),
-//           ListTile(
-//             leading: Icon(Icons.video_collection),
-//             title:Text(titleList[2]),
-//           ) ,
-//           Divider(),
-//           ListTile(
-//             leading: Icon(Icons.video_collection),
-//             title:Text(titleList[3]),
-//           ) ,
-//           Divider(),
-//           ListTile(
-//             leading: Icon(Icons.vpn_key),
-//             title:Text(titleList[4]),
-//           ) ,
-//           Divider(),
-//         ],
-//       ),
