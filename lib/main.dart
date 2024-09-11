@@ -51,16 +51,24 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView( //ListViewは複数のヴィジェットをスクロール可能な状態で、縦に並べるWidget
         children: [
           ListTile(  //ListTileは1枚のリストができる
-            leading: Icon(Icons.vpn_key),  //leadingは左側に何かを表示したい時
-            title:Text("Amazon"),
+            leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
+            title:Text("AmazonPrime"),
           ),
           ListTile(
-            leading: Icon(Icons.vpn_key),
-            title:Text("楽天"),
+            leading: Icon(Icons.video_collection),
+            title:Text("Netflix"),
           ) ,
           ListTile(
+            leading: Icon(Icons.video_collection),
+            title:Text("Hulu"),
+          ) ,
+           ListTile(
+            leading: Icon(Icons.video_collection),
+            title:Text("U-NEXT"),
+          ) ,
+           ListTile(
             leading: Icon(Icons.vpn_key),
-            title:Text("Yahoo"),
+            title:Text("FOD"),
           ) ,
         ],
       ),
