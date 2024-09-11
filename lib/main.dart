@@ -33,8 +33,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  List<String> titleList = ['AmazonPrime','Netflix','Hulu','U-NEXT','FOD'];//titleListの変数提示
 
+  int _counter = 0;
+  
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -52,27 +54,27 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ListTile(  //ListTileは1枚のリストができる
             leading: Icon(Icons.video_collection),  //leadingは左側に何かを表示したい時
-            title:Text("AmazonPrime"),
+            title:Text(titleList[0]),
           ),
           Divider(thickness: 7), //線
           ListTile(
             leading: Icon(Icons.video_collection),
-            title:Text("Netflix"),
+            title:Text(titleList[1]),
           ) ,
           Divider(),
           ListTile(
             leading: Icon(Icons.video_collection),
-            title:Text("Hulu"),
+            title:Text(titleList[2]),
           ) ,
           Divider(),
           ListTile(
             leading: Icon(Icons.video_collection),
-            title:Text("U-NEXT"),
+            title:Text(titleList[3]),
           ) ,
           Divider(),
           ListTile(
             leading: Icon(Icons.vpn_key),
-            title:Text("FOD"),
+            title:Text(titleList[4]),
           ) ,
           Divider(),
         ],
